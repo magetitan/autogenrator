@@ -1,0 +1,25 @@
+2020-04-28 14:12:14.558 [INFO ]  org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting AutoGenratorApplication on DESKTOP-4BR3G96 with PID 9932 (D:\workspace\workspace\autogenrator\target\classes started by zgp in D:\workspace\workspace\autogenrator)
+2020-04-28 14:12:14.564 [DEBUG]  org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:56) - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-04-28 14:12:14.564 [INFO ]  org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+2020-04-28 14:12:15.086 [WARN ]  org.mybatis.logging.Logger.warn(Logger.java:44) - No MyBatis mapper was found in '[com.my.autogenrator]' package. Please check your configuration.
+2020-04-28 14:12:15.207 [INFO ]  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 14:12:15.378 [INFO ]  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 7073 (http)
+2020-04-28 14:12:15.384 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-7073"]
+2020-04-28 14:12:15.385 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+2020-04-28 14:12:15.385 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-04-28 14:12:15.466 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2020-04-28 14:12:15.467 [INFO ]  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 875 ms
+2020-04-28 14:12:15.553 [INFO ]  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56) - Init DruidDataSource
+2020-04-28 14:12:15.639 [INFO ]  com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1010) - {dataSource-1} inited
+2020-04-28 14:12:15.826 [INFO ]  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-28 14:12:17.399 [INFO ]  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58) - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-28 14:12:17.429 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-7073"]
+2020-04-28 14:12:17.445 [INFO ]  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 7073 (http) with context path ''
+2020-04-28 14:12:17.447 [INFO ]  org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started AutoGenratorApplication in 3.132 seconds (JVM running for 5.258)
+2020-04-28 14:12:17.579 [INFO ]  org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-28 14:12:17.579 [INFO ]  org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2020-04-28 14:12:17.584 [INFO ]  org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547) - Completed initialization in 5 ms
+2020-04-28 14:13:46.249 [INFO ]  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159) - Application shutdown requested.
+2020-04-28 14:13:46.252 [INFO ]  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-28 14:13:46.252 [INFO ]  com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:2003) - {dataSource-1} closing ...
+2020-04-28 14:13:46.253 [INFO ]  com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:2075) - {dataSource-1} closed

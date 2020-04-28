@@ -1,4 +1,4 @@
-package com.my.autogenrator.utils;
+package com.my.autogenrator.utils.vo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,6 @@ import com.baomidou.mybatisplus.core.enums.SqlLike;
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.FileOutConfig;
@@ -20,9 +19,10 @@ import com.baomidou.mybatisplus.generator.config.po.LikeTable;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.my.autogenrator.utils.MyAutoGenrator;
 
 //演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
-public class AutoGenrator {
+public class AutoGenratorVo {
 
 	/**
 	 * <p>
@@ -45,7 +45,7 @@ public class AutoGenrator {
 
 	public static void main(String[] args) {
 		// 代码生成器
-		AutoGenerator mpg = new AutoGenerator();
+		MyAutoGenrator mpg = new MyAutoGenrator();
 
 		// 全局配置
 		GlobalConfig gc = new GlobalConfig();
@@ -60,22 +60,22 @@ public class AutoGenrator {
 		DataSourceConfig dsc = new DataSourceConfig();
 //     dsc.setUrl("jdbc:mysql://localhost:3306/mkqy?useUnicode=true&useSSL=false&characterEncoding=utf8");
 		dsc.setUrl(
-				"jdbc:mysql://localhost:3306/data-into?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true");
+				"jdbc:mysql://47.92.240.63:3306/data-governance?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true");
 		// dsc.setSchemaName("public");
 //     dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setDriverName("com.mysql.cj.jdbc.Driver");
 		dsc.setUsername("root");
-		dsc.setPassword("root");
+		dsc.setPassword("htcx654321#");
 		mpg.setDataSource(dsc);
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setModuleName("aerotrust");
-		pc.setParent("com");
-		pc.setEntity("pojo.po.opc");
-		pc.setMapper("dao.mapper.opc");
-		pc.setService("service.opc");
-		pc.setServiceImpl("service.impl.opc");
+		pc.setParent("com.aerotrust");
+		pc.setModuleName("data.governance");
+		pc.setEntity("pojo.po");
+		pc.setMapper("dao.mapper");
+		pc.setService("service");
+		pc.setServiceImpl("service.impl");
 		mpg.setPackageInfo(pc);
 
 		// 自定义配置
@@ -118,9 +118,9 @@ public class AutoGenrator {
 
 		// 配置自定义输出模板
 		// 指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
-		// templateConfig.setEntity("templates/entity2.java");
-		// templateConfig.setService();
-		// templateConfig.setController();
+		 templateConfig.setEntity("/com/my/autogenrator/utils/vo/entityVo.java");
+//		 templateConfig.setService();
+//		 templateConfig.setController();
 
 		templateConfig.setXml(null);
 		mpg.setTemplate(templateConfig);
@@ -129,7 +129,8 @@ public class AutoGenrator {
 		StrategyConfig strategy = new StrategyConfig();
 
 		strategy.setNaming(NamingStrategy.underline_to_camel);
-		strategy.setColumnNaming(NamingStrategy.no_change);
+		strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+		//字段注解
 		strategy.setEntityTableFieldAnnotationEnable(true);
 		strategy.setEntityLombokModel(false);
 		strategy.setRestControllerStyle(true);
@@ -140,9 +141,9 @@ public class AutoGenrator {
 //     strategy.setSuperEntityColumns("ID");
 //     strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
 //		strategy.setInclude(new String[]{"opc_server","opc_app"});
-		strategy.setLikeTable(new LikeTable("modbus_"));
+//		strategy.setLikeTable(new LikeTable("modbus_"));
 		strategy.setControllerMappingHyphenStyle(true);
-		strategy.setTablePrefix(pc.getModuleName() + "_");
+		strategy.setTablePrefix("tb_");//去除前缀
 		mpg.setStrategy(strategy);
 		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 		mpg.execute();
